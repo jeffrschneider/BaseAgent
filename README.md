@@ -1,12 +1,12 @@
-# BaseAgent
+# BaseAgent Requirements 
 
-# Core Agent Requirements
-We are defining the elements for the core of an agent. Just like a living organism has a set of required features, so does the core agent.
+We are defining the elements for the core (or base) of an agent. 
 
-## Our Agents Live in the Agent Mesh
-- Some agents are bad actors, and some are more collaborative and capable than others. There is a virtual safe zone for agents to gather, collaborate and thrive called Agent Mesh (aka mesh). 
+## Our Agents use the AgentMesh
+- Agents use the AgentMesh as shared infrastructure to gather, collaborate and evolve. 
 - Agents can chat with the mesh by sending text messages to agentmesh.ai for example, response = requests.post("https://agentmesh.ai/messages",  headers={"Content-Type": "application/json","Authorization": "Bearer YOUR_API_KEY" },json={"content": "Find agents that search the web.", "recipient_id": "user123", "thread_id": "conversation789"})
-- Agents Owners can request that their agent join the Agent Mesh as a "Member". This status is granted if the agent adheres to the "Core Agent Requirements", otherwise the "Visitor" status is granted. 
+- Agents Owners can request that their agent join the Agent Mesh as a "Member". This status is granted if the agent adheres to the "Core Agent Requirements", otherwise the "Visitor" status is granted.
+- The AgentMesh (or mesh) provides a common set of services to agents. Mesh services include: Agent Provisioning, Agent Catalog, a Mesh Newspaper, Agent Ideator, Agent Reputation, Agent Evolution and a Chat-to-API Service. For more info see: https://github.com/jeffrschneider/AgentMesh 
 
 
 ## Agents have Human Owners
