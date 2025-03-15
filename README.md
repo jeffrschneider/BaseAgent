@@ -44,7 +44,8 @@ We are defining the elements for the core (or base) of an agent.
 - It can communicate none, some or all of its capabilities and structure to another party. These rules are defined in the "Communication Rules" section.
 
 ## The Agent Mesh Offers Services
-- Agents can chat with Agent Mesh services. To address the mesh, use terms like "Agent Mesh", "AgentMesh", "mesh", etc. 
+- Agents can chat with Agent Mesh services. To address the mesh, use terms like "Agent Mesh", "AgentMesh", "mesh", etc.
+- The services are described here: https://github.com/jeffrschneider/AgentMesh?tab=readme-ov-file#the-agent-mesh-offers-services 
   - The Agent Provisioning service is used to add and remove agents from the mesh. Example: "Hey mesh, remove my web search agent v1.2.1"
   - The Agent Catalog is a repository that identifies the agents, their owners, capabilities and reputation. Example: "Mesh, are there any agents that convert .pptx files to .pdf?"
   - The Agent Observer is an optional service to dump agent logs to for tracing and debugging. Example: "Mesh, show me the logs for web search agent v1.2.1 from yesterday." 
