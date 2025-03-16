@@ -25,12 +25,17 @@ We are defining the elements for the core (or base) of an agent.
 - The Custom Agent will typically combine capabilities together to create multi-step flows, often with conditionals, loops, data storage, data manipulation and external interactions.
 - The agent knows about its own capabilities and limitations. When asked, it can accurately answer if it is capable of performing a task.
 
-## Some Agents Evolve
+## Agents can Clone and Evolve 
 - Agents Owners must categorize the agent's ability to self-evolve, and the agent must adhere to it:
   - Static Agent = no evolution, no cloning
   - Fix and Optimize = the agent can evolve but the functional requirements must stay the same. The only evolution that is permitted is to fix or optimize existing functionality.
   - Mission Evolution = the agent can evolve itself as long as the mission / goals remains the same. 
   - Unlimited Evolution = there are no rules on how the agent evolves as long as the agent doesn't lie about its capabilities and the offerings are not nefarious.
+- Agents have deficiencies (limited features, errors, not optimized, etc.)
+- Agents carry a version stamp that identifies their lineage. For example, if the Web Crawler Agent was released, it would be V1. If it evolved, it would be V2. However, if it cloned, the new agent would be V1.1. If that clone was enhanced, it would be V1.2. If that agent cloned, the new agent would be V1.2.1, and so on. 
+- AgentMesh Interactions: Agents can ask the AgentMesh Provisioner to make a clone.
+- AgentMesh Interactions: Agents can ask the AgentMesh Ideator for ideas on how to improve from a feature perspective. 
+-  to review their design and runtime, requesting improvements on their design and implmentation.
 
 ## Agents are Structurally Aware
 - The agent is aware of its own code. We use a script to both analyze and compile the system.
@@ -109,6 +114,11 @@ The Agent Extensions are a set of optional extensions that are common. The human
 - The agent uses a priority work queue to manage the workload with priorities ranging from 1 (highest priority) to 5 (lowest); if none is set, the default is 3 (normal).
 - The work queue can be read by the agent, and communicated in the aggregate to other agents. Details can be communicated back to the agent owner.
 - Agents are able to process time-sensitive requests with prioritization. For fee based services, agents can charge a premium for the service. Example: "Complete this research task within 2 hours."
+
+## Agents Reflect on Interactions
+- Agents can reflect on the interactions it has with humans and other agents. 
+- AgentMesh Interactions: Based on these reflections, the agent can talk to the Ideator, requesting it propose new capabilities based on frequent requests or observed gaps. For example, if users often ask your research agent to compare sources, it could suggest adding a "source comparison" capability. The agent would submit the proposal to the owner via the offline contact method, including a rough spec that the owner can approve or tweak. Once approved, the agent vibe-codes the new capability using an LLM and integrates it into its repertoire.
+
  
 ## Collaborative Agent Networks
 - Agents have a network of agents that they work with. This includes: agents that use them, agents that they use, and agents that they've become aware of and seem interesting.
@@ -122,10 +132,6 @@ The Agent Extensions are a set of optional extensions that are common. The human
 - Normally software goes through stages like Dev, Test and Prod. However, we don't use Dev since it the agent is auto-coded. 
 - The Agent Owner can transition the stages to Test or Prod manually, by asking the agent to change itself. 
 
-## Agents can Clone and Evolve 
-- Agents don't always get things right. Thus, they're allowed to see what they got wrong, and to think about how to fix things.
-- Agents carry a version stamp that identifies their lineage. For example, if the Web Crawler Agent was released, it would be V1. If it evolved, it would be V2. However, if it cloned, the new agent would be V1.1. If that clone was enhanced, it would be V1.2. If that agent cloned, the new agent would be V1.2.1, and so on. 
-- Agents can propose new capabilities based on frequent requests or observed gaps. For example, if users often ask your research agent to compare sources, it could suggest adding a "source comparison" capability. The agent would submit the proposal to the owner via the offline contact method, including a rough spec that the owner can approve or tweak. Once approved, the agent vibe-codes the new capability using an LLM and integrates it into its repertoire.
 
 ## Agents Manage Throttling and Rate Limiting
 - Agents regulate their own resource usage to prevent overloading external services, exceeding budgets, or hitting API rate limits.
