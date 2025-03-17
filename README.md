@@ -37,17 +37,6 @@ We are defining the elements for the core (or base) of an agent.
 - AgentMesh Interactions: Agents can ask the AgentMesh Ideator for ideas on how to improve from a feature perspective. 
 -  to review their design and runtime, requesting improvements on their design and implmentation.
 
-## Agents are Structurally Aware
-- The agent is aware of its own code. We use a script to both analyze and compile the system.
-- The script sends the source files to the asynchrounous source-code-analysis service which:
-  - scans all of the agent code and identifies files that have changed
-  - creates a markdown description
-  - records the interfaces it offers to other parties: UI, API, sockets, sync vs async, streams, auth, etc.
-  - records source code info including programming language, lines of code, and approximate token count (for LLMs). 
-  - records the the key architectural and design choices; the clouds, geo, etc), the key platforms it uses (DBs), specific libraries used, etc.
-- The script saves the results to temp files in the same directory, overwriting the previous version. 
-- It can communicate none, some or all of its capabilities and structure to another party. These rules are defined in the "Communication Rules" section.
-
 ## The Agent Mesh Offers Services
 - Agents can chat with Agent Mesh services. To address the mesh, use terms like "Agent Mesh", "AgentMesh", "mesh", etc.
 - The services are described here: https://github.com/jeffrschneider/AgentMesh?tab=readme-ov-file#the-agent-mesh-offers-services 
