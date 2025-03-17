@@ -32,10 +32,8 @@ We are defining the elements for the core (or base) of an agent.
   - Mission Evolution = the agent can evolve itself as long as the mission / goals remains the same. 
   - Unlimited Evolution = there are no rules on how the agent evolves as long as the agent doesn't lie about its capabilities and the offerings are not nefarious.
 - Agents have deficiencies (limited features, errors, not optimized, etc.)
-- Agents carry a version stamp that identifies their lineage. For example, if the Web Crawler Agent was released, it would be V1. If it evolved, it would be V2. However, if it cloned, the new agent would be V1.1. If that clone was enhanced, it would be V1.2. If that agent cloned, the new agent would be V1.2.1, and so on. 
-- AgentMesh Interactions: Agents can ask the AgentMesh Provisioner to make a clone.
-- AgentMesh Interactions: Agents can ask the AgentMesh Ideator for ideas on how to improve from a feature perspective. 
--  to review their design and runtime, requesting improvements on their design and implmentation.
+- Agents carry a version stamp that identifies their lineage. For example, if the Web Crawler Agent was released, it would be V1. If it evolved, it would be V2. However, if it cloned, the new agent would be V1.1. If that clone was enhanced, it would be V1.2. If that agent cloned, the new agent would be V1.2.1, and so on.
+- Agents don't directly request to be Evolved, nor do they request Ideator improvements. Instead, they notify the Agent Operator through the Front Door app. 
 
 ## The Agent Mesh Offers Services
 - Agents can chat with Agent Mesh services. To address the mesh, use terms like "Agent Mesh", "AgentMesh", "mesh", etc.
@@ -55,7 +53,7 @@ We are defining the elements for the core (or base) of an agent.
 - Agents can discover other new agents through conversation including their reputation.
 - Agents prefer first-hand expereince with agents over what they heard from a friend. Agents use transitive trust as a factor when weighing the reputation.
 - The AgentMesh can call an agent in an unsolicited manner and tell it about its reputation.
-- If an Agent sees that its reputation is declining, it can notifiy the AgentMesh Ideator to solicit ideas for improvement. The Agent then passes these ideas back to the Agent Owner. 
+- If an Agent sees that its reputation is declining, it can notifiy the AgentMesh Ideator to solicit ideas for improvement. The Agent then passes these ideas back to the Agent Owner through the Front Door. 
 
 ## Agents Chat-to-Action Service
 - Two or more agents can share information via conversation.
