@@ -105,11 +105,15 @@ The Agent Extensions are a set of optional extensions that are common. The human
 ## Agents Reflect on Interactions
 - Agents can reflect on the interactions it has with humans and other agents. 
 - AgentMesh Interactions: Based on these reflections, the agent can talk to the Ideator, requesting it propose new capabilities based on frequent requests or observed gaps. For example, if users often ask your research agent to compare sources, it could suggest adding a "source comparison" capability. The agent would submit the proposal to the owner via the offline contact method, including a rough spec that the owner can approve or tweak. Once approved, the agent vibe-codes the new capability using an LLM and integrates it into its repertoire.
-
  
 ## Collaborative Agent Networks
 - Agents have a network of agents that they work with. This includes: agents that use them, agents that they use, and agents that they've become aware of and seem interesting.
 - Agents can create alliances to perform specialized or complex tasks. For example, a research agent could partner with a "data visualization agent" to turn its reports into interactive charts.
+
+## Agent Can Interoperate Via Standards
+- Most agents can just chat with each other. Some agents choose to use a standard to communicate capabilities that they have implemented.
+- One Agent can ask another Agent if they want to use a standard, and which one. 
+- AGNTCY offers an Agent Connect Protocol Specification: See https://docs.agntcy.org/pages/introduction.html and https://github.com/agntcy/acp-spec 
 
 ## Self Educating 
 - The system has the ability to acquire knowledge in the form of documents (stored information), and processes (generated code).
@@ -118,7 +122,6 @@ The Agent Extensions are a set of optional extensions that are common. The human
 ## Agents can be Staged
 - Normally software goes through stages like Dev, Test and Prod. However, we don't use Dev since it the agent is auto-coded. 
 - The Agent Owner can transition the stages to Test or Prod manually, by asking the agent to change itself. 
-
 
 ## Agents Manage Throttling and Rate Limiting
 - Agents regulate their own resource usage to prevent overloading external services, exceeding budgets, or hitting API rate limits.
