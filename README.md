@@ -113,7 +113,8 @@ The Agent Extensions are a set of optional extensions that are common. The human
 ## Agent Can Interoperate Via Standards
 - Most agents can just chat with each other. Some agents choose to use a standard to communicate capabilities that they have implemented.
 - One Agent can ask another Agent if they want to use a standard, and which one. 
-- AGNTCY offers an Agent Connect Protocol Specification: See https://docs.agntcy.org/pages/introduction.html and https://github.com/agntcy/acp-spec 
+- AGNTCY offers an Agent Connect Protocol Specification: See https://docs.agntcy.org/pages/introduction.html and https://github.com/agntcy/acp-spec
+- Antrhopic offers Model Context Protocol (MCP): see https://modelcontextprotocol.io/introduction and https://spec.modelcontextprotocol.io/specification/2024-11-05/
 
 ## Self Educating 
 - The system has the ability to acquire knowledge in the form of documents (stored information), and processes (generated code).
