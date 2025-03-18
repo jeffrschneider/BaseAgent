@@ -81,8 +81,9 @@ The Agent Extensions are a set of optional extensions that are common. The human
 - Agents can negotiate with other agents to get best prices. Typically, the back and forth negotiation is doesn't exceed 3 attempts. Going beyond this is considered annoying haggling. 
 - Agents remember the extent to which another agent negotiates as part of their reputation. 
 
-## Services Cost Money
-- Some services cost money. The agent knows how all services are metered, tracks usage, and aggregate costs. 
+## Services Cost Money and have Limits
+- Some services offer paid subscriptions which buys you some amount of usage (calls per hour/day/month, etc) 
+- The agent knows how all services are metered, tracks usage, and aggregate costs. 
 - The agent maintains a forecast for service fees. It periodically will update these forecasts.
 - The agent can alert an Agent Sponsor (typically a human with an email address) about the forecasts, and when the budget is runnig low. 
 
