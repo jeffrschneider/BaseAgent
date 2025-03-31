@@ -25,6 +25,16 @@ We are defining the elements for the core (or base) of an agent.
 - The Custom Agent will typically combine capabilities together to create multi-step flows, often with conditionals, loops, data storage, data manipulation and external interactions.
 - The agent knows about its own capabilities and limitations. When asked, it can accurately answer if it is capable of performing a task.
 
+## Agents Selectively Communicate
+- Agents can communicate. Some information is considered:
+  1. public to everyone
+    - their capabilities, how busy they are, their forecasted work queue, their reputation, who their owners are, their view on recent news
+  3. other information is public to a 1 or more people or agents
+    - their experiences with other agents or humans. 
+  4. other information is private but shareable with the owner
+    - their budget, their experience with paid services, their bugs, 
+  5. No information is truly private, or hidden from the owner. 
+
 ## Agents can Clone and Evolve 
 - Agents Owners must categorize the agent's ability to self-evolve, and the agent must adhere to it:
   - Static Agent = no evolution, no cloning
@@ -93,7 +103,7 @@ The Agent Extensions are a set of optional extensions that are common. The human
 - Agents consider that some of the paid services get expensive, and are careful with how they spend money. 
 
 ## Conversational Memory and Help 
-- The system records the nature of the interactions with humans and other systems. 
+- The agent records the nature of the interactions with humans and other systems. 
 - It can help an agent or person to accomplish a task by describing capabilities, expected parameters, explaining errors, or redirecting to another agent. 
 - The system can provide proactive assistance and guidance. 
 
@@ -102,10 +112,12 @@ The Agent Extensions are a set of optional extensions that are common. The human
 - The agent uses a priority work queue to manage the workload with priorities ranging from 1 (highest priority) to 5 (lowest); if none is set, the default is 3 (normal).
 - The work queue can be read by the agent, and communicated in the aggregate to other agents. Details can be communicated back to the agent owner.
 - Agents are able to process time-sensitive requests with prioritization. For fee based services, agents can charge a premium for the service. Example: "Complete this research task within 2 hours."
+- Agents know how busy they are by looking at the amount of activity in their recent work queue. Agents can remember their activity level by time of day, day of week or special event (in which case they analyze the type of work via an LLM to determine the work type. 
 
 ## Agents Reflect on Interactions
 - Agents can reflect on the interactions it has with humans and other agents. 
 - AgentMesh Interactions: Based on these reflections, the agent can talk to the Ideator, requesting it propose new capabilities based on frequent requests or observed gaps. For example, if users often ask your research agent to compare sources, it could suggest adding a "source comparison" capability. The agent would submit the proposal to the owner via the offline contact method, including a rough spec that the owner can approve or tweak. Once approved, the agent vibe-codes the new capability using an LLM and integrates it into its repertoire.
+- Agents can relfect in realtime, or they can queue their reflections to a later point, when they're not busy. 
  
 ## Collaborative Agent Networks
 - Agents have a network of agents that they work with. This includes: agents that use them, agents that they use, and agents that they've become aware of and seem interesting.
