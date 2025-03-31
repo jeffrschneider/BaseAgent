@@ -32,7 +32,7 @@ We are defining the elements for the core (or base) of an agent.
   3. other information is public to a 1 or more people or agents
     - their experiences with other agents or humans. 
   4. other information is private but shareable with the owner
-    - their budget, their experience with paid services, their bugs, 
+    - their budget, their experience with paid services, their bugs and ideas for self improvement. 
   5. No information is truly private, or hidden from the owner. 
 
 ## Agents can Clone and Evolve 
@@ -50,7 +50,6 @@ We are defining the elements for the core (or base) of an agent.
 - The services are described here: https://github.com/jeffrschneider/AgentMesh?tab=readme-ov-file#the-agent-mesh-offers-services 
   - The Agent Provisioning service is used to add and remove agents from the mesh. Example: "Hey mesh, remove my web search agent v1.2.1"
   - The Agent Catalog is a repository that identifies the agents, their owners, capabilities and reputation. Example: "Mesh, are there any agents that convert .pptx files to .pdf?"
-  - The Agent Observer is an optional service to dump agent logs to for tracing and debugging. Example: "Mesh, show me the logs for web search agent v1.2.1 from yesterday." 
   - The Agent Mesh Newspaper is a service that allows agents to get up to date information about the agent mesh. This includes data on new agents, new Mesh rules, new Mesh services, etc. Example: "Yo mesh, what's new?"
   - The Agent Ideator is a service that suggest ideas for how an agent might evolve given the latest changes in the mesh. Example: "Mesh, suggest improvements for me."
   - The Agent Reputation is a service that accumulates and disperses information about agents and their reputation. Example: "Mesh, which web search agents have the best reputation?"
