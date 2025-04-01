@@ -1,4 +1,14 @@
-# Prompts for ADE Pattern with Looping and Exit Conditions
+# The "Adaptive Deliberation and Execution" (ADE) pattern
+
+The "Adaptive Deliberation and Execution" (ADE) pattern aims to emulate how humans deliberate over options, assess feasibility, prioritize, and act with awareness of constraints and goals. 
+- Triage an inbound statement
+- Determine the goal and who benefits
+- Identify if a request is feasible, or if new resources are needed to satisfy the request
+- Create a set of options weighed by risk/reward
+- Break a problem into a series of individidual steps; for each step, check memory for a well known answer
+- Execute and monitor the success of each step
+- Reflect on what worked or failed, and save the lessons learned back to memory
+- Communicate final results back to agent/human 
 
 ## Assumptions
 
